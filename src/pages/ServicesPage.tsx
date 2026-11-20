@@ -83,8 +83,7 @@ export function ServicesPage() {
 
           <div className="mt-5 grid grid-cols-1 items-end gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
-              <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#935b25]">
-                <span className="h-[2px] w-6 bg-[#b57435]" aria-hidden="true" />
+              <div className="text-sm font-semibold tracking-wide text-[#935b25]">
                 <span>All Tree Care &amp; Property Maintenance</span>
               </div>
               <h1 className="mt-3.5 text-[clamp(2rem,3.6vw,3rem)] font-semibold leading-tight text-[#1c3326]">
@@ -217,8 +216,7 @@ export function ServicesPage() {
         <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.8fr_1.4fr] lg:gap-14">
             <div>
-              <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#935b25]">
-                <span className="h-[2px] w-6 bg-[#b57435]" aria-hidden="true" />
+              <div className="text-sm font-semibold tracking-wide text-[#935b25]">
                 <span>Specialized Treatments</span>
               </div>
               <h2 className="mt-3.5 text-3xl font-semibold text-[#1c3326]">

@@ -69,8 +69,7 @@ export function HomePage() {
 
         <div className="relative mx-auto flex min-h-[680px] max-w-[1600px] flex-col justify-end px-5 py-12 sm:px-8 sm:py-16 lg:min-h-[760px] lg:justify-center lg:px-12 lg:py-24">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#d6a46f]">
-              <span className="h-[2px] w-6 bg-[#d6a46f]" aria-hidden="true" />
+            <div className="text-sm font-semibold tracking-wide text-[#d6a46f]">
               <span>Central Arkansas Tree Care · Since 1996</span>
             </div>
 
@@ -125,8 +124,7 @@ export function HomePage() {
         <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
           <div className="flex flex-wrap items-end justify-between gap-6 border-b border-[#dad3c5] pb-8">
             <div className="max-w-xl">
-              <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#935b25]">
-                <span className="h-[2px] w-6 bg-[#b57435]" aria-hidden="true" />
+              <div className="text-sm font-semibold tracking-wide text-[#935b25]">
                 <span>Our Services</span>
               </div>
               <h2 className="mt-3.5 text-3xl font-semibold text-[#1c3326] sm:text-4xl">
@@ -282,8 +280,7 @@ export function HomePage() {
             </div>
 
             <div>
-              <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#d6a46f]">
-                <span className="h-[2px] w-6 bg-[#d6a46f]" aria-hidden="true" />
+              <div className="text-sm font-semibold tracking-wide text-[#d6a46f]">
                 <span>Little Rock&rsquo;s Tree Experts Since 1996</span>
               </div>
               <h2 className="mt-3.5 text-3xl font-semibold text-[#f7f4ee] sm:text-4xl">
@@ -387,8 +384,7 @@ export function HomePage() {
       <section className="border-b border-[#dad3c5] py-16 lg:py-24">
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-start gap-12 px-5 sm:px-8 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16 lg:px-12">
           <div>
-            <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#935b25]">
-              <span className="h-[2px] w-6 bg-[#b57435]" aria-hidden="true" />
+            <div className="text-sm font-semibold tracking-wide text-[#935b25]">
               <span>Trusted by Homeowners Like You</span>
             </div>
             <h2 className="mt-3.5 text-3xl font-semibold text-[#1c3326] sm:text-4xl">
@@ -459,8 +455,7 @@ export function HomePage() {
           <div className="grid grid-cols-1 items-stretch overflow-hidden rounded-[6px] border border-[#dad3c5] bg-[#efece4] lg:grid-cols-[1.12fr_0.88fr]">
             <div className="flex flex-col justify-between p-6 sm:p-10 lg:p-12">
               <div>
-                <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#935b25]">
-                  <span className="h-[2px] w-6 bg-[#b57435]" aria-hidden="true" />
+                <div className="text-sm font-semibold tracking-wide text-[#935b25]">
                   <span>Central Arkansas Coverage</span>
                 </div>
                 <h2 className="mt-3.5 text-3xl font-semibold text-[#1c3326] sm:text-4xl">

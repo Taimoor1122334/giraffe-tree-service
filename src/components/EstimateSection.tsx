@@ -108,8 +108,7 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
       <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-start gap-10 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:px-12">
         {/* Heritage & On-Site Assessment Narrative */}
         <div>
-          <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#935b25]">
-            <span className="h-[2px] w-6 bg-[#b57435]" aria-hidden="true" />
+          <div className="text-sm font-semibold tracking-wide text-[#935b25]">
             <span>A Higher Level of Tree Service</span>
           </div>
           <h2 className="mt-3.5 text-3xl font-semibold leading-tight text-[#1c3326] sm:text-4xl">

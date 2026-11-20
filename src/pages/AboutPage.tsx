@@ -36,8 +36,7 @@ export function AboutPage() {
 
           <div className="mt-6 grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
             <div>
-              <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#935b25]">
-                <span className="h-[2px] w-6 bg-[#b57435]" aria-hidden="true" />
+              <div className="text-sm font-semibold tracking-wide text-[#935b25]">
                 <span>Serving Little Rock Since 1996</span>
               </div>
               <h1 className="mt-3.5 text-[clamp(2rem,3.6vw,3rem)] font-semibold leading-tight text-[#1c3326]">

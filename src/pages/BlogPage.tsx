@@ -39,8 +39,7 @@ export function BlogPage() {
 
           <div className="mt-5 grid grid-cols-1 items-end gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
-              <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#935b25]">
-                <span className="h-[2px] w-6 bg-[#b57435]" aria-hidden="true" />
+              <div className="text-sm font-semibold tracking-wide text-[#935b25]">
                 <span>Field Notes &amp; Tree Care Guides</span>
               </div>
               <h1 className="mt-3.5 text-[clamp(2rem,3.6vw,3rem)] font-semibold leading-tight text-[#1c3326]">
