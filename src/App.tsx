@@ -1,0 +1,135 @@
+import {useEffect} from 'react';
+import {SiteFooter} from './components/SiteFooter';
+import {SiteHeader} from './components/SiteHeader';
+import {getBlogPostBySlug, getServiceBySlug} from './data/treeServiceData';
+import {AboutPage} from './pages/AboutPage';
+import {BlogArticlePage} from './pages/BlogArticlePage';
+import {BlogPage} from './pages/BlogPage';
+import {ContactPage} from './pages/ContactPage';
+import {EmploymentPage} from './pages/EmploymentPage';
+import {HomePage} from './pages/HomePage';
+import {ServiceDetailPage} from './pages/ServiceDetailPage';
+import {ServicesPage} from './pages/ServicesPage';
+import {RouterProvider, useRouter} from './router/RouterContext';
+
+function AppShell() {
+  const {currentPath, navigate} = useRouter();
+
+  const serviceSlug = currentPath.startsWith('/services/')
+    ? currentPath.replace('/services/', '')
+    : null;
+  const matchedService = serviceSlug ? getServiceBySlug(serviceSlug) : undefined;
+
+  const blogSlug = currentPath.startsWith('/blog/')
+    ? currentPath.replace('/blog/', '')
+    : null;
+  const matchedArticle = blogSlug ? getBlogPostBySlug(blogSlug) : undefined;
+
+  useEffect(() => {
+    const base = 'Giraffe Tree Service | Little Rock Tree Care';
+    if (currentPath === '/') {
+      document.title = 'Giraffe Tree Service | Little Rock Tree Care & Property Maintenance';
+    } else if (currentPath === '/services') {
+      document.title = `Services | ${base}`;
+    } else if (matchedService) {
+      document.title = `${matchedService.title} | ${base}`;
+    } else if (currentPath === '/about') {
+      document.title = `About Us | ${base}`;
+    } else if (currentPath === '/blog') {
+      document.title = `Blog & Field Notes | ${base}`;
+    } else if (matchedArticle) {
+      document.title = `${matchedArticle.title} | ${base}`;
+    } else if (currentPath === '/employment') {
+      document.title = `Employment | ${base}`;
+    } else if (currentPath === '/contact') {
+      document.title = `Contact & Free Estimate | ${base}`;
+    } else {
+      document.title = base;
+    }
+  }, [currentPath, matchedService, matchedArticle]);
+
+  const renderPage = () => {
+    if (currentPath === '/') {
+      return <HomePage />;
+    }
+    if (currentPath === '/services') {
+      return <ServicesPage />;
+    }
+    if (matchedService) {
+      return <ServiceDetailPage service={matchedService} />;
+    }
+    if (currentPath === '/about') {
+      return <AboutPage />;
+    }
+    if (currentPath === '/blog') {
+      return <BlogPage />;
+    }
+    if (matchedArticle) {
+      return <BlogArticlePage article={matchedArticle} />;
+    }
+    if (currentPath === '/employment') {
+      return <EmploymentPage />;
+    }
+    if (currentPath === '/contact') {
+      return <ContactPage />;
+    }
+
+    return (
+      <section className="py-20">
+        <div className="mx-auto max-w-[720px] px-5 text-center sm:px-8">
+          <p className="text-sm font-semibold tracking-wide text-[#935b25]">Page Not Found</p>
+          <h1 className="mt-3 text-3xl font-semibold text-[#1c3326] sm:text-4xl">
+            We Couldn&rsquo;t Find That Page
+          </h1>
+          <p className="mt-4 text-[1.05rem] text-[#4d5750]">
+            Explore our tree care services, read about our Little Rock team since 1996, or request
+            a free estimate.
+          </p>
+          <div className="mt-7 flex flex-wrap justify-center gap-3">
+            <button
+              type="button"
+              onClick={() => navigate('/')}
+              className="cursor-pointer rounded-[3px] bg-[#1c3326] px-5 py-2.5 text-sm font-semibold text-[#f7f4ee] hover:bg-[#284635]"
+            >
+              Return Home
+            </button>
+            <button
+              type="button"
+              onClick={() => navigate('/services')}
+              className="cursor-pointer rounded-[3px] border border-[#dad3c5] bg-[#fcfbf8] px-5 py-2.5 text-sm font-semibold text-[#1c3326] hover:border-[#1c3326]"
+            >
+              View All Services
+            </button>
+          </div>
+        </div>
+      </section>
+    );
+  };
+
+  return (
+    <div className="flex min-h-screen flex-col bg-[#f7f4ee] text-[#1d241f]">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-[3px] focus:bg-[#1c3326] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-[#f7f4ee]"
+      >
+        Skip to main content
+      </a>
+
+      <SiteHeader />
+
+      <main id="main-content" className="flex-1">
+        {renderPage()}
+      </main>
+
+      <SiteFooter />
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <RouterProvider>
+      <AppShell />
+    </RouterProvider>
+  );
+}

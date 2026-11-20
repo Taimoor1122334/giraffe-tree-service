@@ -1,0 +1,6 @@
+{
+  "name": "Giraffe Tree Service",
+  "description": "Residential, commercial, and 24/7 emergency tree care serving Little Rock and Central Arkansas since 1996.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

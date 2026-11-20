@@ -1,0 +1,162 @@
+import {useState} from 'react';
+import {Clock, Mail, MapPin, Phone} from 'lucide-react';
+import {EstimateSection} from '../components/EstimateSection';
+import {COMPANY_INFO, SERVICE_AREAS} from '../data/treeServiceData';
+import {useRouter} from '../router/RouterContext';
+
+export function ContactPage() {
+  const {navigate, preselectedService} = useRouter();
+  const [selectedAreaId, setSelectedAreaId] = useState<string>(SERVICE_AREAS[0].id);
+
+  const selectedArea =
+    SERVICE_AREAS.find((area) => area.id === selectedAreaId) ?? SERVICE_AREAS[0];
+
+  return (
+    <div>
+      {/* Header & Office Summary */}
+      <section className="border-b border-[#dad3c5] bg-[#f7f4ee] py-12 lg:py-16">
+        <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+          <nav aria-label="Breadcrumb" className="text-sm text-[#4d5750]">
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/');
+              }}
+              className="hover:text-[#1c3326] hover:underline"
+            >
+              Home
+            </a>
+            <span className="mx-2" aria-hidden="true">
+              /
+            </span>
+            <span className="font-semibold text-[#1c3326]">Contact</span>
+          </nav>
+
+          <div className="mt-6 grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1fr] lg:gap-14">
+            <div>
+              <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#935b25]">
+                <span className="h-[2px] w-6 bg-[#b57435]" aria-hidden="true" />
+                <span>Little Rock Office &amp; 24/7 Dispatch</span>
+              </div>
+              <h1 className="mt-3.5 text-[clamp(2rem,3.6vw,3rem)] font-semibold leading-tight text-[#1c3326]">
+                Contact Giraffe Tree Service
+              </h1>
+              <p className="mt-4 text-[1.0625rem] leading-relaxed text-[#4d5750]">
+                Call our Little Rock office for scheduled estimates or 24/7 storm emergencies, or
+                complete the estimate form below and we will follow up to walk your property.
+              </p>
+
+              <div className="mt-8 grid grid-cols-1 gap-6 border-t border-[#dad3c5] pt-6 sm:grid-cols-2">
+                <div className="flex items-start gap-3">
+                  <MapPin className="mt-1 h-5 w-5 shrink-0 text-[#935b25]" aria-hidden="true" />
+                  <div>
+                    <p className="text-xs font-semibold tracking-wider text-[#1c3326] uppercase">
+                      Office Address
+                    </p>
+                    <p className="mt-1 text-[0.96rem] text-[#4d5750]">{COMPANY_INFO.address}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Phone className="mt-1 h-5 w-5 shrink-0 text-[#935b25]" aria-hidden="true" />
+                  <div>
+                    <p className="text-xs font-semibold tracking-wider text-[#1c3326] uppercase">
+                      Phone &amp; 24/7 Storm Line
+                    </p>
+                    <a
+                      href={COMPANY_INFO.phoneHref}
+                      className="mt-1 block text-[1.05rem] font-bold text-[#1c3326] tabular-nums hover:underline"
+                    >
+                      {COMPANY_INFO.phoneDisplay}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Mail className="mt-1 h-5 w-5 shrink-0 text-[#935b25]" aria-hidden="true" />
+                  <div>
+                    <p className="text-xs font-semibold tracking-wider text-[#1c3326] uppercase">
+                      Email
+                    </p>
+                    <a
+                      href={`mailto:${COMPANY_INFO.email}`}
+                      className="mt-1 block text-[0.96rem] font-medium text-[#1c3326] underline decoration-[#dad3c5] underline-offset-4 hover:decoration-[#1c3326]"
+                    >
+                      {COMPANY_INFO.email}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Clock className="mt-1 h-5 w-5 shrink-0 text-[#935b25]" aria-hidden="true" />
+                  <div>
+                    <p className="text-xs font-semibold tracking-wider text-[#1c3326] uppercase">
+                      Hours
+                    </p>
+                    <p className="mt-1 text-[0.95rem] text-[#4d5750]">
+                      Office: {COMPANY_INFO.officeHours}
+                      <br />
+                      Emergency: {COMPANY_INFO.emergencyHours}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Interactive County Coverage */}
+            <div className="rounded-[4px] border border-[#dad3c5] bg-[#fcfbf8] p-6 sm:p-8">
+              <h2 className="text-2xl font-semibold text-[#1c3326]">
+                Central Arkansas Service Footprint
+              </h2>
+              <p className="mt-2 text-sm text-[#4d5750]">
+                Select a county or metro corridor to inspect local crew availability.
+              </p>
+
+              <div
+                className="mt-5 flex flex-wrap gap-1.5 rounded-[4px] border border-[#dad3c5] bg-[#f7f4ee] p-1.5"
+                role="tablist"
+                aria-label="Service Counties"
+              >
+                {SERVICE_AREAS.map((area) => {
+                  const isActive = area.id === selectedArea.id;
+                  return (
+                    <button
+                      key={area.id}
+                      type="button"
+                      role="tab"
+                      aria-selected={isActive}
+                      onClick={() => setSelectedAreaId(area.id)}
+                      className={`cursor-pointer rounded-[3px] px-3 py-1.5 text-xs font-semibold whitespace-nowrap transition-colors ${
+                        isActive
+                          ? 'bg-[#1c3326] text-[#f7f4ee]'
+                          : 'text-[#4d5750] hover:bg-[#efece4] hover:text-[#1c3326]'
+                      }`}
+                    >
+                      {area.name}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="mt-5 space-y-2 border-t border-[#dad3c5] pt-4 text-sm">
+                <p className="font-semibold text-[#1c3326]">
+                  Communities:{' '}
+                  <span className="font-normal text-[#4d5750]">{selectedArea.communities}</span>
+                </p>
+                <p className="font-semibold text-[#1c3326]">
+                  Primary Focus:{' '}
+                  <span className="font-normal text-[#4d5750]">{selectedArea.focus}</span>
+                </p>
+                <p className="font-medium text-[#935b25]">{selectedArea.dispatchNote}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Free Estimate Form Section */}
+      <EstimateSection preselectedService={preselectedService} />
+    </div>
+  );
+}
