@@ -54,7 +54,12 @@ export function ContactPage() {
                     <p className="text-xs font-semibold tracking-wider text-[#1c3326] uppercase">
                       Office Address
                     </p>
-                    <p className="mt-1 text-[0.96rem] text-[#4d5750]">{COMPANY_INFO.address}</p>
+                    <a
+                      href="https://maps.google.com/?q=512+Bender+St+Little+Rock+AR+72202"
+                      className="mt-1 block text-[0.96rem] text-[#4d5750] underline decoration-[#dad3c5] underline-offset-4 hover:text-[#1c3326] hover:decoration-[#1c3326]"
+                    >
+                      {COMPANY_INFO.address}
+                    </a>
                   </div>
                 </div>
 
@@ -157,6 +162,35 @@ export function ContactPage() {
 
       {/* Free Estimate Form Section */}
       <EstimateSection preselectedService={preselectedService} />
+
+      <section className="border-b border-[#dad3c5] bg-[#fcfbf8] py-12 lg:py-16" aria-label="Office map">
+        <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+          <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <p className="text-sm font-semibold tracking-wide text-[#935b25]">Find the Office</p>
+              <h2 className="mt-1 text-2xl font-semibold text-[#1c3326] sm:text-3xl">
+                512 Bender St, Little Rock
+              </h2>
+            </div>
+            <a
+              href="https://maps.google.com/?q=512+Bender+St+Little+Rock+AR+72202"
+              className="text-sm font-semibold text-[#1c3326] underline decoration-[#dad3c5] underline-offset-4 hover:decoration-[#1c3326]"
+            >
+              Open in Google Maps
+            </a>
+          </div>
+          <div className="overflow-hidden rounded-[6px] border border-[#dad3c5]">
+            <iframe
+              title="Giraffe Tree Service location map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.621327533897!2d-92.34464240443445!3d34.76513060987559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d2bb8e2fcbf1e1%3A0x414fdb3673eb665a!2sGiraffe%20Tree%20Services!5e0!3m2!1sen!2sus!4v1775232778554!5m2!1sen!2sus"
+              className="h-[420px] w-full border-0 sm:h-[480px]"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

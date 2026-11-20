@@ -53,74 +53,67 @@ export function HomePage() {
 
   return (
     <>
-      {/* 1. Asymmetric Editorial Split Hero */}
-      <section className="border-b border-[#dad3c5] py-10 lg:py-16">
-        <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 items-stretch gap-10 lg:grid-cols-[1.02fr_1.12fr] lg:gap-14">
-            <div className="flex flex-col justify-center">
-              <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#935b25]">
-                <span className="h-[2px] w-6 bg-[#b57435]" aria-hidden="true" />
-                <span>Central Arkansas Tree Care · Since 1996</span>
-              </div>
+      {/* 1. Full-bleed photographic hero */}
+      <section className="relative overflow-hidden bg-[#132219] text-[#f7f4ee]">
+        <div className="absolute inset-0" aria-hidden="true">
+          <ResilientImage
+            src={HERO_IMAGE.src}
+            alt=""
+            fallbackTitle="Giraffe Tree Service · Little Rock, AR"
+            loading="eager"
+            className="h-full w-full object-cover object-[70%_55%] lg:object-[74%_62%]"
+          />
+          <div className="absolute inset-0 bg-[#132219]/45 lg:bg-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#132219] via-[#132219]/80 to-[#132219]/30 lg:bg-gradient-to-r lg:from-[#132219] lg:via-[#132219]/72 lg:to-[#132219]/5" />
+        </div>
 
-              <h1 className="mt-4 text-[clamp(2.25rem,4vw,3.35rem)] font-semibold leading-[1.14] tracking-[-0.015em] text-[#1c3326]">
-                Expert Tree Care for a Safer, More Beautiful Property.
-              </h1>
-
-              <p className="mt-5 max-w-xl text-[1.125rem] leading-relaxed text-[#4d5750]">
-                Giraffe Tree Service provides dependable, safety-first tree care for residential,
-                commercial, and municipal properties across Little Rock and Central Arkansas.
-              </p>
-
-              <div className="mt-8 flex flex-wrap items-center gap-3.5">
-                <button
-                  type="button"
-                  onClick={() => scrollToEstimate()}
-                  className="cursor-pointer whitespace-nowrap rounded-[3px] bg-[#1c3326] px-6 py-3.5 text-[0.98rem] font-semibold text-[#f7f4ee] transition-colors duration-150 hover:bg-[#284635]"
-                >
-                  Get a Free Estimate
-                </button>
-                <a
-                  href={COMPANY_INFO.phoneHref}
-                  className="inline-flex items-center gap-2 whitespace-nowrap rounded-[3px] border border-[#dad3c5] bg-[#fcfbf8] px-5 py-3.5 text-[0.98rem] font-semibold text-[#1c3326] tabular-nums transition-colors duration-150 hover:border-[#1c3326]"
-                >
-                  <Phone className="h-4 w-4 text-[#935b25]" aria-hidden="true" />
-                  <span>Call {COMPANY_INFO.phoneDisplay}</span>
-                </a>
-              </div>
+        <div className="relative mx-auto flex min-h-[680px] max-w-[1600px] flex-col justify-end px-5 py-12 sm:px-8 sm:py-16 lg:min-h-[760px] lg:justify-center lg:px-12 lg:py-24">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide text-[#d6a46f]">
+              <span className="h-[2px] w-6 bg-[#d6a46f]" aria-hidden="true" />
+              <span>Central Arkansas Tree Care · Since 1996</span>
             </div>
 
-            <div className="flex flex-col">
-              <div className="aspect-[5/4] w-full overflow-hidden rounded-[6px] bg-[#1c3326] lg:h-full lg:min-h-[420px]">
-                <ResilientImage
-                  src={HERO_IMAGE.src}
-                  alt={HERO_IMAGE.alt}
-                  fallbackTitle="Giraffe Tree Service · Little Rock, AR"
-                  loading="eager"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="mt-3 flex flex-wrap items-baseline justify-between gap-2 text-sm text-[#4d5750]">
-                <span>Experienced crews &amp; modern rigging equipment</span>
-                <span>Free estimates · No hidden fees</span>
-              </div>
+            <h1 className="mt-4 text-[clamp(2.6rem,4.8vw,4.5rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-[#f7f4ee]">
+              Expert Tree Care for a Safer, More Beautiful Property.
+            </h1>
+
+            <p className="mt-5 max-w-xl text-[1.125rem] leading-relaxed text-[#e7e3da]">
+              Giraffe Tree Service provides dependable, safety-first tree care for residential,
+              commercial, and municipal properties across Little Rock and Central Arkansas.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+              <button
+                type="button"
+                onClick={() => scrollToEstimate()}
+                className="cursor-pointer whitespace-nowrap rounded-[3px] bg-[#b57435] px-6 py-3.5 text-[0.98rem] font-semibold text-[#fcfbf8] transition-colors duration-150 hover:bg-[#935b25]"
+              >
+                Get a Free Estimate
+              </button>
+              <a
+                href={COMPANY_INFO.phoneHref}
+                className="inline-flex items-center gap-2 whitespace-nowrap rounded-[3px] border border-[#f7f4ee]/40 px-5 py-3.5 text-[0.98rem] font-semibold text-[#f7f4ee] tabular-nums transition-colors duration-150 hover:border-[#f7f4ee] hover:bg-[#f7f4ee]/10"
+              >
+                <Phone className="h-4 w-4 text-[#d6a46f]" aria-hidden="true" />
+                <span>Call {COMPANY_INFO.phoneDisplay}</span>
+              </a>
             </div>
           </div>
 
-          {/* Full-width 4-Column Track Record Ledger below Hero Split */}
-          <div
-            className="mt-10 grid grid-cols-2 gap-6 border-t border-[#dad3c5] pt-7 md:grid-cols-4"
+          <dl
+            className="mt-12 grid max-w-4xl grid-cols-2 gap-x-8 gap-y-6 border-t border-[#f7f4ee]/20 pt-7 md:grid-cols-4 lg:mt-16"
             aria-label="Company Track Record"
           >
             {TRACK_RECORD.map((stat) => (
               <div key={stat.label}>
-                <span className="block font-serif text-2xl font-bold text-[#1c3326] tabular-nums sm:text-[1.75rem]">
+                <dt className="text-sm text-[#e7e3da]">{stat.label}</dt>
+                <dd className="mt-1 font-serif text-2xl font-bold text-[#f7f4ee] tabular-nums sm:text-[1.85rem]">
                   {stat.value}
-                </span>
-                <span className="mt-1 block text-sm text-[#4d5750]">{stat.label}</span>
+                </dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
       </section>
 
