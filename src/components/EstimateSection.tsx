@@ -118,7 +118,7 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
           </p>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-relaxed text-[#4a5a52]">
             Our experienced crews use modern cranes, rigging gear, and industry best practices to
-            protect your lawn, structures, and surrounding landscape—leaving your yard cleaner than
+            protect your lawn, structures, and surrounding landscape, leaving your yard cleaner than
             we found it.
           </p>
 

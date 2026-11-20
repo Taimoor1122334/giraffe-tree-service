@@ -61,10 +61,10 @@ export function HomePage() {
             alt=""
             fallbackTitle="Giraffe Tree Service · Little Rock, AR"
             loading="eager"
-            className="h-full w-full object-cover object-[70%_55%] lg:object-[74%_62%]"
+            className="h-full w-full object-cover object-[88%_42%] lg:object-right"
           />
-          <div className="absolute inset-0 bg-[#0e3d2a]/35 lg:bg-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0e3d2a]/90 via-[#0e3d2a]/55 to-[#0e3d2a]/20 lg:bg-gradient-to-r lg:from-[#0e3d2a]/90 lg:via-[#0e3d2a]/50 lg:to-transparent" />
+          <div className="absolute inset-0 bg-[#0e3d2a]/40 lg:bg-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0e3d2a]/90 via-[#0e3d2a]/55 to-[#0e3d2a]/25 lg:bg-[linear-gradient(90deg,#0e3d2a_0%,rgba(14,61,42,0.82)_28%,rgba(14,61,42,0.18)_52%,transparent_68%)]" />
         </div>
 
         <div className="relative mx-auto flex min-h-[680px] max-w-[1600px] flex-col justify-end px-5 py-12 sm:px-8 sm:py-16 lg:min-h-[760px] lg:justify-center lg:px-12 lg:py-24">
@@ -394,7 +394,7 @@ export function HomePage() {
                   className="h-11 w-11 rounded-full object-cover"
                 />
                 <span>
-                  &mdash; {featuredQuote.author}{' '}
+                  {featuredQuote.author}{' '}
                   <span className="font-normal text-[#4a5a52]">· {featuredQuote.context}</span>
                 </span>
               </figcaption>
@@ -413,7 +413,7 @@ export function HomePage() {
                       className="h-11 w-11 shrink-0 rounded-full object-cover"
                     />
                     <span>
-                      &mdash; {item.author}
+                      {item.author}
                       <span className="mt-0.5 block text-xs font-normal text-[#4a5a52]">
                         {item.context}
                       </span>

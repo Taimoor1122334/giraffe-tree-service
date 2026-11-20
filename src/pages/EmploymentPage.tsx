@@ -207,7 +207,7 @@ export function EmploymentPage() {
                     </p>
                     <p className="mt-1.5 text-sm text-[#14663f]">
                       Position selected: <strong>{submittedRole}</strong>. Our Little Rock office
-                      reviews crew inquiries Monday–Friday, 8am–5pm. You can also follow up by
+                      reviews crew inquiries Monday-Friday, 8am-5pm. You can also follow up by
                       calling{' '}
                       <a href={COMPANY_INFO.phoneHref} className="font-bold underline tabular-nums">
                         {COMPANY_INFO.phoneDisplay}

@@ -162,7 +162,7 @@ export function AboutPage() {
                   &ldquo;{item.quote}&rdquo;
                 </blockquote>
                 <figcaption className="mt-3.5 text-sm font-semibold text-[#145c3e]">
-                  &mdash; {item.author}
+                  {item.author}
                   <span className="mt-0.5 block text-xs font-normal text-[#4a5a52]">
                     {item.context}
                   </span>

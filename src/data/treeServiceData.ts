@@ -82,8 +82,8 @@ export const COMPANY_INFO = {
   phoneDisplay: '(501) 664-8733',
   phoneHref: 'tel:5016648733',
   email: 'office@giraffetree.com',
-  officeHours: 'Mon – Fri 8am – 5pm',
-  emergencyHours: '24/7 — Always Available',
+  officeHours: 'Mon-Fri 8am-5pm',
+  emergencyHours: '24/7, always available',
 };
 
 export const BRAND_LOGO = {
@@ -120,7 +120,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
     categoryLabel: 'Residential & Commercial',
     categoryGroup: 'removal-storm',
     shortDescription:
-      'Safe, controlled removal of hazardous, declining, or unwanted trees—using cranes and modern rigging gear to protect your home, lawn, and surrounding beds.',
+      'Safe, controlled removal of hazardous, declining, or unwanted trees, using cranes and modern rigging gear to protect your home, lawn, and surrounding beds.',
     image: '/images/service-tree-removal.jpg',
     imageAlt: 'Climber high in a large tree during a removal',
     overview:
@@ -186,7 +186,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
     ],
     equipmentUsed: ['Aerial lift buckets', 'Rope-and-saddle climbing gear', 'Precision pole saws', 'Chippers'],
     candidNote:
-      'We never recommend topping a mature hardwood—it creates weak water sprouts and accelerates decay. Selective reduction keeps your canopy healthy and balanced.',
+      'We never recommend topping a mature hardwood. It creates weak water sprouts and accelerates decay. Selective reduction keeps your canopy healthy and balanced.',
     typicalClients: 'Mature residential shade trees, historic Little Rock neighborhoods, commercial campuses',
     processSteps: [
       {
@@ -239,7 +239,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
     ],
     equipmentUsed: ['Forestry mulchers', 'Skid steers & grapples', 'Brush hogs', 'Log haul trucks'],
     candidNote:
-      'Saving mature native hardwoods during site prep adds lasting property value—we mark root protection zones clearly before machines roll onto the lot.',
+      'Saving mature native hardwoods during site prep adds lasting property value. We mark root protection zones clearly before machines roll onto the lot.',
     typicalClients: 'Custom home builders, developers, acreage owners, and property managers',
     processSteps: [
       {
@@ -262,7 +262,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
       {
         question: 'Should I use forestry mulching or traditional haul-off clearing?',
         answer:
-          'Forestry mulching turns brush and small saplings into natural mulch in place—great for hillside erosion control and acreage trails. For foundation pads, we haul out stumps and timber.',
+          'Forestry mulching turns brush and small saplings into natural mulch in place. That is useful for hillside erosion control and acreage trails. For foundation pads, we haul out stumps and timber.',
       },
       {
         question: 'Can you clear brush without damaging large trees I want to keep?',
@@ -292,7 +292,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
     ],
     equipmentUsed: ['24/7 dispatch fleet', 'Heavy rigging cranes', 'High-capacity chippers', 'Storm lighting'],
     candidNote:
-      'Stay well back from downed power lines and suspended limbs—call utility dispatch first for energized lines, and call us at (501) 664-8733 anytime day or night.',
+      'Stay well back from downed power lines and suspended limbs. Call utility dispatch first for energized lines, and call us at (501) 664-8733 anytime day or night.',
     typicalClients: 'Emergency residential calls, municipal storm corridors, commercial properties',
     processSteps: [
       {
@@ -344,7 +344,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
     ],
     equipmentUsed: ['Root collar excavation tools', 'Sounding mallets', 'Binoculars for upper crown checks'],
     candidNote:
-      'We give straightforward recommendations—never upselling unnecessary chemical treatments on a tree that simply needs deadwooding or proper mulching.',
+      'We give straightforward recommendations and never upsell unnecessary chemical treatments on a tree that simply needs deadwooding or proper mulching.',
     typicalClients: 'Homebuyers, longtime property owners, and HOA boards',
     processSteps: [
       {
@@ -367,7 +367,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
       {
         question: 'Should I get a tree health assessment before buying an older Little Rock home?',
         answer:
-          'Yes. One mature declining oak next to a foundation can be a major surprise expense—an assessment lets you budget or plan care upfront.',
+          'Yes. One mature declining oak next to a foundation can be a major surprise expense. An assessment lets you budget or plan care upfront.',
       },
     ],
   },
@@ -383,7 +383,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
     image: '/images/tree-care-crew.jpg',
     imageAlt: 'Grapple truck loading a removed trunk on a tree-lined street',
     overview:
-      'Large shade trees near homes, play areas, and parking lots benefit from scheduled inspections and targeted root-zone care—especially in Central Arkansas clay soils and hot summer droughts.',
+      'Large shade trees near homes, play areas, and parking lots benefit from scheduled inspections and targeted root-zone care, especially in Central Arkansas clay soils and hot summer droughts.',
     whatWeDo: [
       'Periodic structural risk reviews for multi-trunk and leaning specimen trees',
       'Deep root fertilization to improve nutrient uptake in compacted urban soils',
@@ -466,7 +466,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
       {
         question: 'Will cabling permanently save any splitting tree?',
         answer:
-          'No—and we will tell you honestly if a tree is beyond cabling. Hardware supports sound wood with weak geometry, not trunks weakened by deep decay.',
+          'No. We will tell you honestly if a tree is beyond cabling. Hardware supports sound wood with weak geometry, not trunks weakened by deep decay.',
       },
     ],
   },
@@ -501,7 +501,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
       {
         number: '02',
         title: 'Below-Grade Grinding',
-        description: 'Our grinder reduces the stump and flared surface roots 6–10 inches below lawn level.',
+        description: 'Our grinder reduces the stump and flared surface roots 6-10 inches below lawn level.',
       },
       {
         number: '03',
@@ -556,13 +556,13 @@ export const GIRAFFE_PILLARS: PillarItem[] = [
     number: '01',
     title: 'Tree Health First',
     description:
-      'We assess each tree’s structure, canopy, root zone, and overall vitality before recommending any work—so healthy trees thrive long-term.',
+      'We assess each tree’s structure, canopy, root zone, and overall vitality before recommending any work, so healthy trees thrive long-term.',
   },
   {
     number: '02',
     title: 'Quality Workmanship',
     description:
-      'We do not cut corners. Every job—from single-limb pruning to complex crane removals—is completed with precision and modern rigging equipment.',
+      'We do not cut corners. Every job, from single-limb pruning to complex crane removals, is completed with precision and modern rigging equipment.',
   },
   {
     number: '03',
@@ -655,7 +655,7 @@ export const BLOG_POSTS: BlogArticle[] = [
   {
     id: 'cabling-vs-removal',
     slug: 'when-cabling-helps-and-when-removal-is-safer',
-    title: 'When Cabling Helps—And When Removal Is Safer',
+    title: 'When Cabling Helps, and When Removal Is Safer',
     category: 'Structural Care',
     readTime: '4 min read',
     publishedDate: 'October 2026',
@@ -687,7 +687,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     summary:
       'Shearing off the upper canopy starves the roots and forces rapid, weakly attached shoots that snap faster in the next storm.',
     paragraphs: [
-      'Tree topping—cutting main vertical limbs straight back to bare stubs—was common decades ago, and homeowners still occasionally ask for it to lower a tall oak over a roofline.',
+      'Tree topping, cutting main vertical limbs straight back to bare stubs, was common decades ago, and homeowners still occasionally ask for it to lower a tall oak over a roofline.',
       'In practice, topping backfires quickly. Removing up to half the tree’s leaf surface starves the root system, stresses the bark to sunscald, and triggers dense clusters of weakly anchored water sprouts along the stub edges.',
       'Instead, we use selective crown reduction: shortening tall branches back to strong lateral limbs that can take over terminal growth, keeping the canopy lower and lighter while preserving the tree’s natural strength.',
     ],
@@ -708,7 +708,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     image: '/images/tree-removal.jpg',
     imageAlt: 'Large limb resting on a house roof with a bucket truck on site',
     summary:
-      'How to assess downed limbs safely before a crew arrives—especially around service drops, fences, and tensioned trunks.',
+      'How to assess downed limbs safely before a crew arrives, especially around service drops, fences, and tensioned trunks.',
     paragraphs: [
       'When severe thunderstorms or ice sweep through Pulaski County, the urge to start dragging branches off the driveway right away is understandable. Before grabbing a saw, take two minutes to walk the perimeter safely from a distance.',
       'First, look up for hanging broken limbs ("widowmakers") still resting in the upper canopy, and check whether any fallen branches touch overhead utility lines or your home’s weatherhead. Always assume downed wires are energized and call your utility company first.',
@@ -734,7 +734,7 @@ export const BLOG_POSTS: BlogArticle[] = [
       'Thoughtful site flagging before bulldozers arrive saves mature shade trees from slow post-construction decline.',
     paragraphs: [
       'Across Saline, Faulkner, and West Pulaski counties, many custom home builds begin on wooded acreage. Yet it is surprisingly common to see healthy oaks die three years after move-in simply because heavy equipment compacted soil right up to the trunk.',
-      'Before clearing starts, walk the lot with both your builder and an experienced tree crew. Flag the healthy straight-trunked oaks and pines worth keeping, and fence off their root zones—not just around the trunk, but out toward the drip line.',
+      'Before clearing starts, walk the lot with both your builder and an experienced tree crew. Flag the healthy straight-trunked oaks and pines worth keeping, and fence off their root zones, not just around the trunk, but out toward the drip line.',
       'Using forestry mulching for perimeter underbrush while reserving full excavation strictly for the home footprint, septic field, and driveway gives you a clean building site and decades of mature shade.',
     ],
     keyTakeaways: [
