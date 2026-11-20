@@ -53,12 +53,12 @@ export function SiteHeader() {
   const navLinkClass = (active: boolean) =>
     `whitespace-nowrap py-1 text-[0.95rem] font-semibold transition-colors ${
       active
-        ? 'text-[#1c3326] underline decoration-[#b57435] decoration-2 underline-offset-[6px]'
-        : 'text-[#1d241f] hover:text-[#1c3326] hover:underline hover:underline-offset-4'
+        ? 'text-[#145c3e] underline decoration-[#1a7a4c] decoration-2 underline-offset-[6px]'
+        : 'text-[#1b2e24] hover:text-[#145c3e] hover:underline hover:underline-offset-4'
     }`;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[#dad3c5] bg-[#f7f4ee]/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-40 border-b border-[#d5ddd8] bg-white">
       <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between gap-6 px-5 sm:px-8 lg:gap-8 lg:px-12">
         {/* Zone 1: Single-line Brand Wordmark */}
         <a
@@ -117,7 +117,7 @@ export function SiteHeader() {
                   aria-controls="services-menu"
                   aria-label="Toggle services submenu"
                   onClick={() => setDropdownOpen((prev) => !prev)}
-                  className="inline-flex cursor-pointer items-center rounded-[3px] p-1 text-[#1d241f] transition-colors hover:bg-[#efece4] hover:text-[#1c3326]"
+                  className="inline-flex cursor-pointer items-center rounded-md p-1 text-[#1b2e24] transition-colors hover:bg-[#eef3f0] hover:text-[#145c3e]"
                 >
                   <ChevronDown
                     className={`h-4 w-4 transition-transform duration-150 ${
@@ -131,7 +131,7 @@ export function SiteHeader() {
               {dropdownOpen && (
                 <ul
                   id="services-menu"
-                  className="absolute top-full left-0 w-72 rounded-[3px] border border-[#dad3c5] bg-[#fcfbf8] py-2 shadow-lg"
+                  className="absolute top-full left-0 w-72 rounded-md border border-[#d5ddd8] bg-[#ffffff] py-2 shadow-lg"
                 >
                   {submenuServices.map((service) => {
                     const serviceHref = `/services/${service.slug}`;
@@ -147,8 +147,8 @@ export function SiteHeader() {
                           }}
                           className={`block px-4 py-2 text-sm font-medium transition-colors ${
                             isActive
-                              ? 'bg-[#efece4] font-semibold text-[#1c3326]'
-                              : 'text-[#1d241f] hover:bg-[#efece4] hover:text-[#1c3326]'
+                              ? 'bg-[#eef3f0] font-semibold text-[#145c3e]'
+                              : 'text-[#1b2e24] hover:bg-[#eef3f0] hover:text-[#145c3e]'
                           }`}
                         >
                           {service.title}
@@ -156,7 +156,7 @@ export function SiteHeader() {
                       </li>
                     );
                   })}
-                  <li className="my-1.5 border-t border-[#dad3c5]" role="separator" />
+                  <li className="my-1.5 border-t border-[#d5ddd8]" role="separator" />
                   <li>
                     <a
                       href="/services"
@@ -165,7 +165,7 @@ export function SiteHeader() {
                         e.preventDefault();
                         go('/services');
                       }}
-                      className="block px-4 py-2 text-sm font-semibold text-[#1c3326] transition-colors hover:bg-[#efece4]"
+                      className="block px-4 py-2 text-sm font-semibold text-[#145c3e] transition-colors hover:bg-[#eef3f0]"
                     >
                       All Services
                     </a>
@@ -237,7 +237,7 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => go('/contact', 'estimate-request')}
-            className="hidden cursor-pointer whitespace-nowrap rounded-[3px] bg-[#1c3326] px-5 py-2.5 text-sm font-semibold text-[#f7f4ee] transition-colors duration-150 hover:bg-[#284635] lg:inline-flex"
+            className="hidden cursor-pointer whitespace-nowrap rounded-md bg-[#145c3e] px-5 py-2.5 text-sm font-semibold text-[#ffffff] transition-colors duration-150 hover:bg-[#14663f] lg:inline-flex"
           >
             Free Estimate
           </button>
@@ -248,7 +248,7 @@ export function SiteHeader() {
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav-drawer"
             aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            className="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-[3px] border border-[#dad3c5] text-[#1d241f] transition-colors hover:bg-[#efece4] lg:hidden"
+            className="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-md border border-[#d5ddd8] text-[#1b2e24] transition-colors hover:bg-[#eef3f0] lg:hidden"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -259,10 +259,10 @@ export function SiteHeader() {
       {mobileOpen && (
         <div
           id="mobile-nav-drawer"
-          className="max-h-[82vh] overflow-y-auto border-t border-[#dad3c5] bg-[#fcfbf8] px-5 py-5 lg:hidden"
+          className="max-h-[82vh] overflow-y-auto border-t border-[#d5ddd8] bg-[#ffffff] px-5 py-5 lg:hidden"
         >
           <nav aria-label="Mobile Navigation">
-            <ul className="divide-y divide-[#ece7dc]">
+            <ul className="divide-y divide-[#e3ebe6]">
               <li>
                 <a
                   href="/"
@@ -270,7 +270,7 @@ export function SiteHeader() {
                     e.preventDefault();
                     go('/');
                   }}
-                  className="block py-3 font-semibold text-[#1d241f]"
+                  className="block py-3 font-semibold text-[#1b2e24]"
                 >
                   Home
                 </a>
@@ -282,7 +282,7 @@ export function SiteHeader() {
                     e.preventDefault();
                     go('/services');
                   }}
-                  className="block font-semibold text-[#1d241f]"
+                  className="block font-semibold text-[#1b2e24]"
                 >
                   All Services
                 </a>
@@ -295,7 +295,7 @@ export function SiteHeader() {
                           e.preventDefault();
                           go(`/services/${service.slug}`);
                         }}
-                        className="block py-1.5 text-sm font-medium text-[#4d5750] hover:text-[#1c3326]"
+                        className="block py-1.5 text-sm font-medium text-[#4a5a52] hover:text-[#145c3e]"
                       >
                         {service.title}
                       </a>
@@ -310,7 +310,7 @@ export function SiteHeader() {
                     e.preventDefault();
                     go('/about');
                   }}
-                  className="block py-3 font-semibold text-[#1d241f]"
+                  className="block py-3 font-semibold text-[#1b2e24]"
                 >
                   About
                 </a>
@@ -322,7 +322,7 @@ export function SiteHeader() {
                     e.preventDefault();
                     go('/blog');
                   }}
-                  className="block py-3 font-semibold text-[#1d241f]"
+                  className="block py-3 font-semibold text-[#1b2e24]"
                 >
                   Blog
                 </a>
@@ -334,7 +334,7 @@ export function SiteHeader() {
                     e.preventDefault();
                     go('/employment');
                   }}
-                  className="block py-3 font-semibold text-[#1d241f]"
+                  className="block py-3 font-semibold text-[#1b2e24]"
                 >
                   Employment
                 </a>
@@ -346,7 +346,7 @@ export function SiteHeader() {
                     e.preventDefault();
                     go('/contact');
                   }}
-                  className="block py-3 font-semibold text-[#1d241f]"
+                  className="block py-3 font-semibold text-[#1b2e24]"
                 >
                   Contact
                 </a>
@@ -357,13 +357,13 @@ export function SiteHeader() {
               <button
                 type="button"
                 onClick={() => go('/contact', 'estimate-request')}
-                className="w-full cursor-pointer rounded-[3px] bg-[#1c3326] px-5 py-3 text-center text-sm font-semibold text-[#f7f4ee]"
+                className="w-full cursor-pointer rounded-md bg-[#145c3e] px-5 py-3 text-center text-sm font-semibold text-[#ffffff]"
               >
                 Request a Free Estimate
               </button>
               <a
                 href={COMPANY_INFO.phoneHref}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-[3px] border border-[#dad3c5] px-5 py-3 text-sm font-semibold text-[#1c3326] tabular-nums"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-[#d5ddd8] px-5 py-3 text-sm font-semibold text-[#145c3e] tabular-nums"
               >
                 <Phone className="h-4 w-4" aria-hidden="true" />
                 Call {COMPANY_INFO.phoneDisplay}

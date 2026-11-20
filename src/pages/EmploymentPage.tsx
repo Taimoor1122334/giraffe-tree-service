@@ -79,54 +79,51 @@ export function EmploymentPage() {
   return (
     <div>
       {/* Header */}
-      <section className="border-b border-[#dad3c5] bg-[#efece4] py-12 lg:py-16">
+      <section className="border-b border-[#d5ddd8] bg-[#eef3f0] py-12 lg:py-16">
         <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
-          <nav aria-label="Breadcrumb" className="text-sm text-[#4d5750]">
+          <nav aria-label="Breadcrumb" className="text-sm text-[#4a5a52]">
             <a
               href="/"
               onClick={(e) => {
                 e.preventDefault();
                 navigate('/');
               }}
-              className="hover:text-[#1c3326] hover:underline"
+              className="hover:text-[#145c3e] hover:underline"
             >
               Home
             </a>
             <span className="mx-2" aria-hidden="true">
               /
             </span>
-            <span className="font-semibold text-[#1c3326]">Employment</span>
+            <span className="font-semibold text-[#145c3e]">Employment</span>
           </nav>
 
           <div className="mt-6 grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
             <div>
-              <div className="text-sm font-semibold tracking-wide text-[#935b25]">
-                <span>Join Our Little Rock Crews</span>
-              </div>
-              <h1 className="mt-3.5 text-[clamp(2rem,3.6vw,3rem)] font-semibold leading-tight text-[#1c3326]">
+              <h1 className="text-[clamp(2rem,3.2vw,2.75rem)] font-bold leading-tight text-[#145c3e]">
                 Build a Steady Career in Professional Tree Care
               </h1>
-              <p className="mt-4 text-[1.0625rem] leading-relaxed text-[#4d5750]">
+              <p className="mt-4 text-[1.0625rem] leading-relaxed text-[#4a5a52]">
                 Giraffe Tree Service has operated year-round out of Little Rock since 1996. We hire
                 dependable climbers, equipment operators, and ground technicians who take pride in
                 safe rigging and clean job sites.
               </p>
 
-              <div className="mt-6 flex flex-wrap gap-6 border-t border-[#dad3c5] pt-5 text-sm text-[#4d5750]">
+              <div className="mt-6 flex flex-wrap gap-6 border-t border-[#d5ddd8] pt-5 text-sm text-[#4a5a52]">
                 <div className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-[#935b25]" aria-hidden="true" />
+                  <MapPin className="h-4 w-4 text-[#14663f]" aria-hidden="true" />
                   <span>Morning dispatch: {COMPANY_INFO.address}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Phone className="h-4 w-4 text-[#935b25]" aria-hidden="true" />
-                  <a href={COMPANY_INFO.phoneHref} className="font-semibold text-[#1c3326] tabular-nums">
+                  <Phone className="h-4 w-4 text-[#14663f]" aria-hidden="true" />
+                  <a href={COMPANY_INFO.phoneHref} className="font-semibold text-[#145c3e] tabular-nums">
                     {COMPANY_INFO.phoneDisplay}
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="aspect-[5/4] w-full overflow-hidden rounded-[6px] bg-[#1c3326]">
+            <div className="aspect-[5/4] w-full overflow-hidden rounded-[6px] bg-[#145c3e]">
               <ResilientImage
                 src={CREW_IMAGE.src}
                 alt={CREW_IMAGE.alt}
@@ -143,27 +140,27 @@ export function EmploymentPage() {
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-start gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-12">
           {/* Open Positions */}
           <div>
-            <h2 className="text-2xl font-semibold text-[#1c3326] sm:text-3xl">
+            <h2 className="text-2xl font-semibold text-[#145c3e] sm:text-3xl">
               Current Crew Openings
             </h2>
-            <p className="mt-2.5 text-[1rem] text-[#4d5750]">
+            <p className="mt-2.5 text-[1rem] text-[#4a5a52]">
               Select a role below to pre-fill your application, or call our office to speak
               directly with our operations team.
             </p>
 
-            <div className="mt-8 divide-y divide-[#dad3c5] border-y border-[#dad3c5]">
+            <div className="mt-8 divide-y divide-[#d5ddd8] border-y border-[#d5ddd8]">
               {JOB_OPENINGS.map((job) => (
                 <article key={job.id} className="py-6">
-                  <p className="text-xs font-semibold tracking-wide text-[#935b25]">{job.type}</p>
-                  <h3 className="mt-1.5 text-2xl font-semibold text-[#1c3326]">{job.title}</h3>
-                  <p className="mt-2.5 text-[0.98rem] leading-relaxed text-[#4d5750]">
+                  <p className="text-xs font-semibold text-[#14663f]">{job.type}</p>
+                  <h3 className="mt-1.5 text-2xl font-semibold text-[#145c3e]">{job.title}</h3>
+                  <p className="mt-2.5 text-[0.98rem] leading-relaxed text-[#4a5a52]">
                     {job.summary}
                   </p>
-                  <ul className="mt-4 space-y-1.5 text-sm text-[#1d241f]">
+                  <ul className="mt-4 space-y-1.5 text-sm text-[#1b2e24]">
                     {job.requirements.map((req) => (
                       <li key={req} className="flex items-start gap-2.5">
                         <span
-                          className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#1c3326]"
+                          className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#145c3e]"
                           aria-hidden="true"
                         />
                         <span>{req}</span>
@@ -173,7 +170,7 @@ export function EmploymentPage() {
                   <button
                     type="button"
                     onClick={() => handleSelectRole(job.title)}
-                    className="mt-5 cursor-pointer rounded-[3px] border border-[#dad3c5] px-4 py-2 text-sm font-semibold text-[#1c3326] transition-colors hover:border-[#1c3326] hover:bg-[#efece4]"
+                    className="mt-5 cursor-pointer rounded-md border border-[#d5ddd8] px-4 py-2 text-sm font-semibold text-[#145c3e] transition-colors hover:border-[#145c3e] hover:bg-[#eef3f0]"
                   >
                     Apply for {job.title}
                   </button>
@@ -185,12 +182,12 @@ export function EmploymentPage() {
           {/* Application Form */}
           <div
             id="crew-application"
-            className="rounded-[4px] border border-[#dad3c5] bg-[#fcfbf8] p-6 sm:p-8"
+            className="rounded-md border border-[#d5ddd8] bg-[#ffffff] p-6 sm:p-8"
           >
-            <h2 className="text-2xl font-semibold text-[#1c3326]">Crew Application</h2>
-            <p className="mt-1.5 text-sm text-[#4d5750]">
+            <h2 className="text-2xl font-semibold text-[#145c3e]">Crew Application</h2>
+            <p className="mt-1.5 text-sm text-[#4a5a52]">
               Share your experience and contact details. You can also email resumes directly to{' '}
-              <a href={`mailto:${COMPANY_INFO.email}`} className="font-semibold text-[#1c3326] underline">
+              <a href={`mailto:${COMPANY_INFO.email}`} className="font-semibold text-[#145c3e] underline">
                 {COMPANY_INFO.email}
               </a>
               .
@@ -200,15 +197,15 @@ export function EmploymentPage() {
               <div
                 role="status"
                 aria-live="polite"
-                className="mt-6 rounded-[4px] border border-[#b9cbbd] bg-[#eef3ef] p-5 text-[#1c3326]"
+                className="mt-6 rounded-md border border-[#b9cbbd] bg-[#eef3ef] p-5 text-[#145c3e]"
               >
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
                   <div>
-                    <p className="font-serif text-lg font-semibold">
+                    <p className="text-lg font-semibold">
                       Application Ready for {submittedName}
                     </p>
-                    <p className="mt-1.5 text-sm text-[#284635]">
+                    <p className="mt-1.5 text-sm text-[#14663f]">
                       Position selected: <strong>{submittedRole}</strong>. Our Little Rock office
                       reviews crew inquiries Monday–Friday, 8am–5pm. You can also follow up by
                       calling{' '}
@@ -220,7 +217,7 @@ export function EmploymentPage() {
                     <button
                       type="button"
                       onClick={() => setSubmittedName(null)}
-                      className="mt-4 cursor-pointer rounded-[3px] border border-[#1c3326]/30 px-4 py-2 text-sm font-semibold text-[#1c3326] hover:bg-[#1c3326] hover:text-[#f7f4ee]"
+                      className="mt-4 cursor-pointer rounded-md border border-[#145c3e]/30 px-4 py-2 text-sm font-semibold text-[#145c3e] hover:bg-[#145c3e] hover:text-[#ffffff]"
                     >
                       Submit Another Inquiry
                     </button>
@@ -230,7 +227,7 @@ export function EmploymentPage() {
             ) : (
               <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-4">
                 <div>
-                  <label htmlFor="job-role" className="block text-sm font-semibold text-[#1d241f]">
+                  <label htmlFor="job-role" className="block text-sm font-semibold text-[#1b2e24]">
                     Position
                   </label>
                   <select
@@ -240,7 +237,7 @@ export function EmploymentPage() {
                       setForm((prev) => ({...prev, role: e.target.value}));
                       if (errors.role) setErrors((prev) => ({...prev, role: undefined}));
                     }}
-                    className="mt-1.5 w-full rounded-[3px] border border-[#dad3c5] bg-[#f7f4ee] px-3.5 py-2.5 text-[0.98rem] text-[#1d241f] focus:border-[#1c3326] focus:bg-[#fcfbf8] focus:outline-none"
+                    className="mt-1.5 w-full rounded-md border border-[#d5ddd8] bg-[#ffffff] px-3.5 py-2.5 text-[0.98rem] text-[#1b2e24] focus:border-[#145c3e] focus:bg-[#ffffff] focus:outline-none"
                   >
                     {JOB_OPENINGS.map((job) => (
                       <option key={job.id} value={job.title}>
@@ -257,7 +254,7 @@ export function EmploymentPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="app-name" className="block text-sm font-semibold text-[#1d241f]">
+                  <label htmlFor="app-name" className="block text-sm font-semibold text-[#1b2e24]">
                     Full Name
                   </label>
                   <input
@@ -269,7 +266,7 @@ export function EmploymentPage() {
                       setForm((prev) => ({...prev, fullName: e.target.value}));
                       if (errors.fullName) setErrors((prev) => ({...prev, fullName: undefined}));
                     }}
-                    className="mt-1.5 w-full rounded-[3px] border border-[#dad3c5] bg-[#f7f4ee] px-3.5 py-2.5 text-[0.98rem] text-[#1d241f] focus:border-[#1c3326] focus:bg-[#fcfbf8] focus:outline-none"
+                    className="mt-1.5 w-full rounded-md border border-[#d5ddd8] bg-[#ffffff] px-3.5 py-2.5 text-[0.98rem] text-[#1b2e24] focus:border-[#145c3e] focus:bg-[#ffffff] focus:outline-none"
                   />
                   {errors.fullName && (
                     <p className="mt-1.5 flex items-center gap-1.5 text-xs font-medium text-[#8b2c1d]">
@@ -281,7 +278,7 @@ export function EmploymentPage() {
 
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="app-phone" className="block text-sm font-semibold text-[#1d241f]">
+                    <label htmlFor="app-phone" className="block text-sm font-semibold text-[#1b2e24]">
                       Phone
                     </label>
                     <input
@@ -293,7 +290,7 @@ export function EmploymentPage() {
                         setForm((prev) => ({...prev, phone: e.target.value}));
                         if (errors.phone) setErrors((prev) => ({...prev, phone: undefined}));
                       }}
-                      className="mt-1.5 w-full rounded-[3px] border border-[#dad3c5] bg-[#f7f4ee] px-3.5 py-2.5 text-[0.98rem] text-[#1d241f] tabular-nums focus:border-[#1c3326] focus:bg-[#fcfbf8] focus:outline-none"
+                      className="mt-1.5 w-full rounded-md border border-[#d5ddd8] bg-[#ffffff] px-3.5 py-2.5 text-[0.98rem] text-[#1b2e24] tabular-nums focus:border-[#145c3e] focus:bg-[#ffffff] focus:outline-none"
                     />
                     {errors.phone && (
                       <p className="mt-1.5 flex items-center gap-1.5 text-xs font-medium text-[#8b2c1d]">
@@ -304,7 +301,7 @@ export function EmploymentPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="app-email" className="block text-sm font-semibold text-[#1d241f]">
+                    <label htmlFor="app-email" className="block text-sm font-semibold text-[#1b2e24]">
                       Email
                     </label>
                     <input
@@ -316,7 +313,7 @@ export function EmploymentPage() {
                         setForm((prev) => ({...prev, email: e.target.value}));
                         if (errors.email) setErrors((prev) => ({...prev, email: undefined}));
                       }}
-                      className="mt-1.5 w-full rounded-[3px] border border-[#dad3c5] bg-[#f7f4ee] px-3.5 py-2.5 text-[0.98rem] text-[#1d241f] focus:border-[#1c3326] focus:bg-[#fcfbf8] focus:outline-none"
+                      className="mt-1.5 w-full rounded-md border border-[#d5ddd8] bg-[#ffffff] px-3.5 py-2.5 text-[0.98rem] text-[#1b2e24] focus:border-[#145c3e] focus:bg-[#ffffff] focus:outline-none"
                     />
                     {errors.email && (
                       <p className="mt-1.5 flex items-center gap-1.5 text-xs font-medium text-[#8b2c1d]">
@@ -328,7 +325,7 @@ export function EmploymentPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="app-exp" className="block text-sm font-semibold text-[#1d241f]">
+                  <label htmlFor="app-exp" className="block text-sm font-semibold text-[#1b2e24]">
                     Tree Care / Equipment / CDL Experience
                   </label>
                   <input
@@ -337,12 +334,12 @@ export function EmploymentPage() {
                     placeholder="e.g. 3 years climbing & rigging, Class B CDL"
                     value={form.experience}
                     onChange={(e) => setForm((prev) => ({...prev, experience: e.target.value}))}
-                    className="mt-1.5 w-full rounded-[3px] border border-[#dad3c5] bg-[#f7f4ee] px-3.5 py-2.5 text-[0.98rem] text-[#1d241f] focus:border-[#1c3326] focus:bg-[#fcfbf8] focus:outline-none"
+                    className="mt-1.5 w-full rounded-md border border-[#d5ddd8] bg-[#ffffff] px-3.5 py-2.5 text-[0.98rem] text-[#1b2e24] focus:border-[#145c3e] focus:bg-[#ffffff] focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="app-notes" className="block text-sm font-semibold text-[#1d241f]">
+                  <label htmlFor="app-notes" className="block text-sm font-semibold text-[#1b2e24]">
                     Additional Notes
                   </label>
                   <textarea
@@ -351,22 +348,22 @@ export function EmploymentPage() {
                     placeholder="Tell us about your work background and availability..."
                     value={form.notes}
                     onChange={(e) => setForm((prev) => ({...prev, notes: e.target.value}))}
-                    className="mt-1.5 w-full rounded-[3px] border border-[#dad3c5] bg-[#f7f4ee] px-3.5 py-2.5 text-[0.98rem] text-[#1d241f] focus:border-[#1c3326] focus:bg-[#fcfbf8] focus:outline-none"
+                    className="mt-1.5 w-full rounded-md border border-[#d5ddd8] bg-[#ffffff] px-3.5 py-2.5 text-[0.98rem] text-[#1b2e24] focus:border-[#145c3e] focus:bg-[#ffffff] focus:outline-none"
                   />
                 </div>
 
                 <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
                   <button
                     type="submit"
-                    className="cursor-pointer whitespace-nowrap rounded-[3px] bg-[#1c3326] px-6 py-3 text-sm font-semibold text-[#f7f4ee] transition-colors hover:bg-[#284635]"
+                    className="cursor-pointer whitespace-nowrap rounded-md bg-[#145c3e] px-6 py-3 text-sm font-semibold text-[#ffffff] transition-colors hover:bg-[#14663f]"
                   >
                     Submit Crew Inquiry
                   </button>
                   <a
                     href={`mailto:${COMPANY_INFO.email}`}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1c3326] hover:underline"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#145c3e] hover:underline"
                   >
-                    <Mail className="h-4 w-4 text-[#935b25]" aria-hidden="true" />
+                    <Mail className="h-4 w-4 text-[#14663f]" aria-hidden="true" />
                     <span>{COMPANY_INFO.email}</span>
                   </a>
                 </div>

@@ -21,12 +21,12 @@ export function ResilientImage({
   if (hasError) {
     return (
       <div
-        className="flex h-full w-full flex-col items-center justify-center gap-3 bg-[#1c3326] p-6 text-center text-[#f7f4ee]"
+        className="flex h-full w-full flex-col items-center justify-center gap-3 bg-[#145c3e] p-6 text-center text-[#ffffff]"
         role="img"
         aria-label={alt}
       >
-        <Trees className="h-9 w-9 text-[#d6a46f]" aria-hidden="true" />
-        <span className="font-serif text-base font-medium text-[#f7f4ee]">{fallbackTitle}</span>
+        <Trees className="h-9 w-9 text-[#cfe8da]" aria-hidden="true" />
+        <span className="text-base font-medium text-[#ffffff]">{fallbackTitle}</span>
       </div>
     );
   }

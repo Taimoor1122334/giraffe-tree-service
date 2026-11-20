@@ -103,48 +103,45 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
   return (
     <section
       id="estimate-request"
-      className="border-b border-[#dad3c5] bg-[#efece4] py-16 lg:py-24"
+      className="border-b border-[#d5ddd8] bg-[#eef3f0] py-12 lg:py-16"
     >
       <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-start gap-10 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:px-12">
         {/* Heritage & On-Site Assessment Narrative */}
         <div>
-          <div className="text-sm font-semibold tracking-wide text-[#935b25]">
-            <span>A Higher Level of Tree Service</span>
-          </div>
-          <h2 className="mt-3.5 text-3xl font-semibold leading-tight text-[#1c3326] sm:text-4xl">
+          <h2 className="text-3xl font-bold leading-tight text-[#145c3e] sm:text-4xl">
             Honest Assessment First. Precision Work Every Time.
           </h2>
-          <p className="mt-4 max-w-xl text-[1.0625rem] leading-relaxed text-[#4d5750]">
+          <p className="mt-4 max-w-xl text-[1.0625rem] leading-relaxed text-[#4a5a52]">
             Whether you need a single hazardous oak safely rigged down over a roofline, routine
             pruning to protect a mature shade tree, or full lot clearing before construction, we walk
             the property with you and explain your options plainly.
           </p>
-          <p className="mt-4 max-w-xl text-[1.0625rem] leading-relaxed text-[#4d5750]">
+          <p className="mt-4 max-w-xl text-[1.0625rem] leading-relaxed text-[#4a5a52]">
             Our experienced crews use modern cranes, rigging gear, and industry best practices to
             protect your lawn, structures, and surrounding landscape—leaving your yard cleaner than
             we found it.
           </p>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 border-t border-[#dad3c5] pt-6 sm:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 gap-6 border-t border-[#d5ddd8] pt-6 sm:grid-cols-2">
             <div>
-              <h3 className="font-sans text-xs font-semibold tracking-wider text-[#1c3326] uppercase">
+              <h3 className="font-sans text-xs font-semiboldr text-[#145c3e] uppercase">
                 Service Area
               </h3>
-              <p className="mt-1.5 text-[0.95rem] leading-relaxed text-[#4d5750]">
+              <p className="mt-1.5 text-[0.95rem] leading-relaxed text-[#4a5a52]">
                 Little Rock, North Little Rock, Pulaski, Lonoke, Saline, Faulkner &amp; Perry
                 counties.
               </p>
             </div>
             <div>
-              <h3 className="font-sans text-xs font-semibold tracking-wider text-[#1c3326] uppercase">
+              <h3 className="font-sans text-xs font-semiboldr text-[#145c3e] uppercase">
                 Little Rock Office
               </h3>
-              <p className="mt-1.5 text-[0.95rem] leading-relaxed text-[#4d5750]">
+              <p className="mt-1.5 text-[0.95rem] leading-relaxed text-[#4a5a52]">
                 {COMPANY_INFO.address}
                 <br />
                 <a
                   href={`mailto:${COMPANY_INFO.email}`}
-                  className="font-medium text-[#1c3326] underline decoration-[#dad3c5] underline-offset-4 hover:decoration-[#1c3326]"
+                  className="font-medium text-[#145c3e] underline decoration-[#d5ddd8] underline-offset-4 hover:decoration-[#145c3e]"
                 >
                   {COMPANY_INFO.email}
                 </a>
@@ -154,9 +151,9 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
         </div>
 
         {/* Estimate Request Form Card */}
-        <div className="rounded-[4px] border border-[#dad3c5] bg-[#fcfbf8] p-6 sm:p-9">
-          <h3 className="text-2xl font-semibold text-[#1c3326]">Request a Free Estimate</h3>
-          <p className="mt-1.5 text-[0.95rem] text-[#4d5750]">
+        <div className="rounded-md border border-[#d5ddd8] bg-[#ffffff] p-6 sm:p-9">
+          <h3 className="text-2xl font-semibold text-[#145c3e]">Request a Free Estimate</h3>
+          <p className="mt-1.5 text-[0.95rem] text-[#4a5a52]">
             Tell us about your trees or property for a free, no-obligation quote with no hidden
             fees.
           </p>
@@ -165,20 +162,20 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
             <div
               role="status"
               aria-live="polite"
-              className="mt-6 rounded-[4px] border border-[#b9cbbd] bg-[#eef3ef] p-5 text-[#1c3326]"
+              className="mt-6 rounded-md border border-[#b9cbbd] bg-[#eef3ef] p-5 text-[#145c3e]"
             >
               <div className="flex items-start gap-3">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1c3326]" aria-hidden="true" />
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#145c3e]" aria-hidden="true" />
                 <div>
-                  <p className="font-serif text-lg font-semibold">
+                  <p className="text-lg font-semibold">
                     Estimate Request Prepared for {submitted.fullName}
                   </p>
-                  <p className="mt-1.5 text-sm leading-relaxed text-[#284635]">
+                  <p className="mt-1.5 text-sm leading-relaxed text-[#14663f]">
                     Service selected: <strong>{submitted.service}</strong> · Contact:{' '}
                     <span className="tabular-nums">{submitted.phone}</span> ({submitted.email}) ·
                     Recorded at <span className="tabular-nums">{submitted.submittedAt}</span>.
                   </p>
-                  <p className="mt-2.5 text-sm text-[#284635]">
+                  <p className="mt-2.5 text-sm text-[#14663f]">
                     For immediate storm response or same-day scheduling, call our Little Rock office
                     directly at{' '}
                     <a
@@ -192,7 +189,7 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
                   <button
                     type="button"
                     onClick={() => setSubmitted(null)}
-                    className="mt-4 cursor-pointer rounded-[3px] border border-[#1c3326]/30 px-4 py-2 text-sm font-semibold text-[#1c3326] transition-colors hover:bg-[#1c3326] hover:text-[#f7f4ee]"
+                    className="mt-4 cursor-pointer rounded-md border border-[#145c3e]/30 px-4 py-2 text-sm font-semibold text-[#145c3e] transition-colors hover:bg-[#145c3e] hover:text-[#ffffff]"
                   >
                     Submit Another Request
                   </button>
@@ -204,7 +201,7 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
               <div>
                 <label
                   htmlFor="estimate-full-name"
-                  className="block text-sm font-semibold text-[#1d241f]"
+                  className="block text-sm font-semibold text-[#1b2e24]"
                 >
                   Full Name
                 </label>
@@ -220,7 +217,7 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
                     if (errors.fullName) setErrors((prev) => ({...prev, fullName: undefined}));
                   }}
                   aria-invalid={Boolean(errors.fullName)}
-                  className="mt-1.5 w-full rounded-[3px] border border-[#dad3c5] bg-[#f7f4ee] px-3.5 py-2.5 text-[0.98rem] text-[#1d241f] transition-colors focus:border-[#1c3326] focus:bg-[#fcfbf8] focus:outline-none"
+                  className="mt-1.5 w-full rounded-md border border-[#d5ddd8] bg-[#ffffff] px-3.5 py-2.5 text-[0.98rem] text-[#1b2e24] transition-colors focus:border-[#145c3e] focus:bg-[#ffffff] focus:outline-none"
                 />
                 {errors.fullName && (
                   <p className="mt-1.5 flex items-center gap-1.5 text-xs font-medium text-[#8b2c1d]">
@@ -234,7 +231,7 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
                 <div>
                   <label
                     htmlFor="estimate-email"
-                    className="block text-sm font-semibold text-[#1d241f]"
+                    className="block text-sm font-semibold text-[#1b2e24]"
                   >
                     Email
                   </label>
@@ -250,7 +247,7 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
                       if (errors.email) setErrors((prev) => ({...prev, email: undefined}));
                     }}
                     aria-invalid={Boolean(errors.email)}
-                    className="mt-1.5 w-full rounded-[3px] border border-[#dad3c5] bg-[#f7f4ee] px-3.5 py-2.5 text-[0.98rem] text-[#1d241f] transition-colors focus:border-[#1c3326] focus:bg-[#fcfbf8] focus:outline-none"
+                    className="mt-1.5 w-full rounded-md border border-[#d5ddd8] bg-[#ffffff] px-3.5 py-2.5 text-[0.98rem] text-[#1b2e24] transition-colors focus:border-[#145c3e] focus:bg-[#ffffff] focus:outline-none"
                   />
                   {errors.email && (
                     <p className="mt-1.5 flex items-center gap-1.5 text-xs font-medium text-[#8b2c1d]">
@@ -263,7 +260,7 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
                 <div>
                   <label
                     htmlFor="estimate-phone"
-                    className="block text-sm font-semibold text-[#1d241f]"
+                    className="block text-sm font-semibold text-[#1b2e24]"
                   >
                     Phone
                   </label>
@@ -279,7 +276,7 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
                       if (errors.phone) setErrors((prev) => ({...prev, phone: undefined}));
                     }}
                     aria-invalid={Boolean(errors.phone)}
-                    className="mt-1.5 w-full rounded-[3px] border border-[#dad3c5] bg-[#f7f4ee] px-3.5 py-2.5 text-[0.98rem] text-[#1d241f] tabular-nums transition-colors focus:border-[#1c3326] focus:bg-[#fcfbf8] focus:outline-none"
+                    className="mt-1.5 w-full rounded-md border border-[#d5ddd8] bg-[#ffffff] px-3.5 py-2.5 text-[0.98rem] text-[#1b2e24] tabular-nums transition-colors focus:border-[#145c3e] focus:bg-[#ffffff] focus:outline-none"
                   />
                   {errors.phone && (
                     <p className="mt-1.5 flex items-center gap-1.5 text-xs font-medium text-[#8b2c1d]">
@@ -293,7 +290,7 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
               <div>
                 <label
                   htmlFor="estimate-service"
-                  className="block text-sm font-semibold text-[#1d241f]"
+                  className="block text-sm font-semibold text-[#1b2e24]"
                 >
                   I&rsquo;m interested in&hellip;
                 </label>
@@ -306,7 +303,7 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
                     if (errors.service) setErrors((prev) => ({...prev, service: undefined}));
                   }}
                   aria-invalid={Boolean(errors.service)}
-                  className="mt-1.5 w-full rounded-[3px] border border-[#dad3c5] bg-[#f7f4ee] px-3.5 py-2.5 text-[0.98rem] text-[#1d241f] transition-colors focus:border-[#1c3326] focus:bg-[#fcfbf8] focus:outline-none"
+                  className="mt-1.5 w-full rounded-md border border-[#d5ddd8] bg-[#ffffff] px-3.5 py-2.5 text-[0.98rem] text-[#1b2e24] transition-colors focus:border-[#145c3e] focus:bg-[#ffffff] focus:outline-none"
                 >
                   <option value="">Select a service</option>
                   {SERVICE_OPTIONS.map((option) => (
@@ -326,7 +323,7 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
               <div>
                 <label
                   htmlFor="estimate-message"
-                  className="block text-sm font-semibold text-[#1d241f]"
+                  className="block text-sm font-semibold text-[#1b2e24]"
                 >
                   Property &amp; Tree Details
                 </label>
@@ -337,22 +334,22 @@ export function EstimateSection({preselectedService}: EstimateSectionProps) {
                   placeholder="Share a brief note about the tree, stump, lot, or storm damage..."
                   value={form.message}
                   onChange={(e) => setForm((prev) => ({...prev, message: e.target.value}))}
-                  className="mt-1.5 w-full rounded-[3px] border border-[#dad3c5] bg-[#f7f4ee] px-3.5 py-2.5 text-[0.98rem] text-[#1d241f] transition-colors focus:border-[#1c3326] focus:bg-[#fcfbf8] focus:outline-none"
+                  className="mt-1.5 w-full rounded-md border border-[#d5ddd8] bg-[#ffffff] px-3.5 py-2.5 text-[0.98rem] text-[#1b2e24] transition-colors focus:border-[#145c3e] focus:bg-[#ffffff] focus:outline-none"
                 />
               </div>
 
               <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
                 <button
                   type="submit"
-                  className="cursor-pointer whitespace-nowrap rounded-[3px] bg-[#1c3326] px-6 py-3 text-[0.96rem] font-semibold text-[#f7f4ee] transition-colors duration-150 hover:bg-[#284635]"
+                  className="cursor-pointer whitespace-nowrap rounded-md bg-[#145c3e] px-6 py-3 text-[0.96rem] font-semibold text-[#ffffff] transition-colors duration-150 hover:bg-[#14663f]"
                 >
                   Get Your Free Quote
                 </button>
-                <p className="text-sm text-[#4d5750]">
+                <p className="text-sm text-[#4a5a52]">
                   Urgent storm damage? Call{' '}
                   <a
                     href={COMPANY_INFO.phoneHref}
-                    className="font-bold text-[#1c3326] underline decoration-[#dad3c5] underline-offset-4 tabular-nums hover:decoration-[#1c3326]"
+                    className="font-bold text-[#145c3e] underline decoration-[#d5ddd8] underline-offset-4 tabular-nums hover:decoration-[#145c3e]"
                   >
                     {COMPANY_INFO.phoneDisplay}
                   </a>{' '}

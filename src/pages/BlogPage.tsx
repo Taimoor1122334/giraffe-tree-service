@@ -18,35 +18,32 @@ export function BlogPage() {
   return (
     <div>
       {/* Editorial Page Header */}
-      <section className="border-b border-[#dad3c5] bg-[#efece4] py-12 lg:py-16">
+      <section className="border-b border-[#d5ddd8] bg-[#eef3f0] py-12 lg:py-16">
         <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
-          <nav aria-label="Breadcrumb" className="text-sm text-[#4d5750]">
+          <nav aria-label="Breadcrumb" className="text-sm text-[#4a5a52]">
             <a
               href="/"
               onClick={(e) => {
                 e.preventDefault();
                 navigate('/');
               }}
-              className="hover:text-[#1c3326] hover:underline"
+              className="hover:text-[#145c3e] hover:underline"
             >
               Home
             </a>
             <span className="mx-2" aria-hidden="true">
               /
             </span>
-            <span className="font-semibold text-[#1c3326]">Blog</span>
+            <span className="font-semibold text-[#145c3e]">Blog</span>
           </nav>
 
           <div className="mt-5 grid grid-cols-1 items-end gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
-              <div className="text-sm font-semibold tracking-wide text-[#935b25]">
-                <span>Field Notes &amp; Tree Care Guides</span>
-              </div>
-              <h1 className="mt-3.5 text-[clamp(2rem,3.6vw,3rem)] font-semibold leading-tight text-[#1c3326]">
+              <h1 className="text-[clamp(2rem,3.2vw,2.75rem)] font-bold leading-tight text-[#145c3e]">
                 Practical Tree Care Advice for Central Arkansas
               </h1>
             </div>
-            <p className="text-[1.02rem] leading-relaxed text-[#4d5750]">
+            <p className="text-[1.02rem] leading-relaxed text-[#4a5a52]">
               Plain-spoken notes from our Little Rock crews on storm preparation, mature oak
               pruning, cabling decisions, and lot clearing without harming keeper trees.
             </p>
@@ -57,9 +54,9 @@ export function BlogPage() {
       {/* Filter & Posts */}
       <section className="py-14 lg:py-20">
         <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#dad3c5] pb-6">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#d5ddd8] pb-6">
             <div
-              className="flex flex-wrap gap-1.5 rounded-[4px] border border-[#dad3c5] bg-[#efece4] p-1"
+              className="flex flex-wrap gap-1.5 rounded-md border border-[#d5ddd8] bg-[#eef3f0] p-1"
               role="group"
               aria-label="Filter articles by topic"
             >
@@ -70,10 +67,10 @@ export function BlogPage() {
                     key={category}
                     type="button"
                     onClick={() => setSelectedCategory(category)}
-                    className={`cursor-pointer rounded-[3px] px-3.5 py-1.5 text-xs font-semibold whitespace-nowrap transition-colors ${
+                    className={`cursor-pointer rounded-md px-3.5 py-1.5 text-xs font-semibold whitespace-nowrap transition-colors ${
                       active
-                        ? 'bg-[#1c3326] text-[#f7f4ee]'
-                        : 'text-[#4d5750] hover:bg-[#fcfbf8] hover:text-[#1c3326]'
+                        ? 'bg-[#145c3e] text-[#ffffff]'
+                        : 'text-[#4a5a52] hover:bg-[#ffffff] hover:text-[#145c3e]'
                     }`}
                   >
                     {category}
@@ -82,7 +79,7 @@ export function BlogPage() {
               })}
             </div>
 
-            <p className="text-sm text-[#4d5750] tabular-nums">
+            <p className="text-sm text-[#4a5a52] tabular-nums">
               {visiblePosts.length} {visiblePosts.length === 1 ? 'article' : 'articles'}
             </p>
           </div>
@@ -93,7 +90,7 @@ export function BlogPage() {
               return (
                 <article
                   key={post.id}
-                  className="flex flex-col overflow-hidden rounded-[6px] border border-[#dad3c5] bg-[#fcfbf8]"
+                  className="flex flex-col overflow-hidden rounded-[6px] border border-[#d5ddd8] bg-[#ffffff]"
                 >
                   <a
                     href={href}
@@ -101,7 +98,7 @@ export function BlogPage() {
                       e.preventDefault();
                       navigate(href);
                     }}
-                    className="group aspect-[16/10] w-full overflow-hidden bg-[#efece4]"
+                    className="group aspect-[16/10] w-full overflow-hidden bg-[#eef3f0]"
                   >
                     <ResilientImage
                       src={post.image}
@@ -113,8 +110,8 @@ export function BlogPage() {
 
                   <div className="flex flex-1 flex-col justify-between p-6 sm:p-7">
                     <div>
-                      <p className="text-xs font-medium text-[#4d5750]">
-                        <span className="font-semibold text-[#935b25]">{post.category}</span>
+                      <p className="text-xs font-medium text-[#4a5a52]">
+                        <span className="font-semibold text-[#14663f]">{post.category}</span>
                         <span className="mx-2" aria-hidden="true">
                           ·
                         </span>
@@ -125,7 +122,7 @@ export function BlogPage() {
                         <span>{post.readTime}</span>
                       </p>
 
-                      <h2 className="mt-2 text-2xl font-semibold text-[#1c3326]">
+                      <h2 className="mt-2 text-2xl font-semibold text-[#145c3e]">
                         <a
                           href={href}
                           onClick={(e) => {
@@ -138,19 +135,19 @@ export function BlogPage() {
                         </a>
                       </h2>
 
-                      <p className="mt-3 text-[0.98rem] leading-relaxed text-[#4d5750]">
+                      <p className="mt-3 text-[0.98rem] leading-relaxed text-[#4a5a52]">
                         {post.summary}
                       </p>
                     </div>
 
-                    <div className="mt-6 border-t border-[#dad3c5] pt-4">
+                    <div className="mt-6 border-t border-[#d5ddd8] pt-4">
                       <a
                         href={href}
                         onClick={(e) => {
                           e.preventDefault();
                           navigate(href);
                         }}
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1c3326] hover:underline hover:underline-offset-4"
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#145c3e] hover:underline hover:underline-offset-4"
                       >
                         <span>Read Full Article</span>
                         <ArrowRight className="h-4 w-4" aria-hidden="true" />
