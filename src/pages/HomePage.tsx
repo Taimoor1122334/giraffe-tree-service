@@ -61,7 +61,7 @@ export function HomePage() {
             alt=""
             fallbackTitle="Giraffe Tree Service · Little Rock, AR"
             loading="eager"
-            className="h-full w-full object-cover object-[88%_42%] lg:object-right"
+            className="h-full w-full object-cover object-[78%_72%] lg:object-[right_68%]"
           />
           <div className="absolute inset-0 bg-[#0e3d2a]/40 lg:bg-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0e3d2a]/90 via-[#0e3d2a]/55 to-[#0e3d2a]/25 lg:bg-[linear-gradient(90deg,#0e3d2a_0%,rgba(14,61,42,0.82)_28%,rgba(14,61,42,0.18)_52%,transparent_68%)]" />
@@ -387,12 +387,7 @@ export function HomePage() {
               <blockquote className="text-xl leading-relaxed text-[#145c3e] sm:text-2xl">
                 &ldquo;{featuredQuote.quote}&rdquo;
               </blockquote>
-              <figcaption className="mt-4 flex items-center gap-3 text-sm font-semibold text-[#14663f]">
-                <img
-                  src={featuredQuote.avatar}
-                  alt=""
-                  className="h-11 w-11 rounded-full object-cover"
-                />
+              <figcaption className="mt-4 text-sm font-semibold text-[#14663f]">
                 <span>
                   {featuredQuote.author}{' '}
                   <span className="font-normal text-[#4a5a52]">· {featuredQuote.context}</span>
@@ -406,12 +401,7 @@ export function HomePage() {
                   <blockquote className="text-[1rem] leading-relaxed text-[#4a5a52]">
                     &ldquo;{item.quote}&rdquo;
                   </blockquote>
-                  <figcaption className="mt-3.5 flex items-center gap-3 text-sm font-semibold text-[#145c3e]">
-                    <img
-                      src={item.avatar}
-                      alt=""
-                      className="h-11 w-11 shrink-0 rounded-full object-cover"
-                    />
+                  <figcaption className="mt-3.5 text-sm font-semibold text-[#145c3e]">
                     <span>
                       {item.author}
                       <span className="mt-0.5 block text-xs font-normal text-[#4a5a52]">
