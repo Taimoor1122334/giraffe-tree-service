@@ -419,8 +419,8 @@ export function HomePage() {
       {/* 7. Central Arkansas Service Area & Final Call to Action */}
       <section className="py-12 lg:py-16">
         <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 items-stretch overflow-hidden rounded-[6px] border border-[#d5ddd8] bg-[#eef3f0] lg:grid-cols-[1.12fr_0.88fr]">
-            <div className="flex flex-col justify-between p-6 sm:p-10 lg:p-12">
+          <div className="grid grid-cols-1 items-stretch overflow-hidden rounded-[6px] border border-[#d5ddd8] bg-[#eef3f0] lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="flex flex-col justify-between p-5 sm:p-8">
               <div>
                 <h2 className="text-3xl font-bold text-[#145c3e] sm:text-4xl">
                   Schedule Your Free, No-Obligation Estimate
@@ -469,7 +469,7 @@ export function HomePage() {
                 </div>
               </div>
 
-              <div className="mt-7 flex flex-wrap items-center gap-3.5">
+              <div className="mt-5 flex flex-wrap items-center gap-3.5">
                 <a
                   href="/contact"
                   onClick={(e) => {
@@ -490,13 +490,15 @@ export function HomePage() {
               </div>
             </div>
 
-            <div className="min-h-[280px] bg-[#145c3e] lg:h-full">
-              <ResilientImage
-                src={CTA_IMAGE.src}
-                alt={CTA_IMAGE.alt}
-                fallbackTitle="On-site estimate with a Giraffe Tree Service crew"
-                className="h-full w-full object-cover object-center"
-              />
+            <div className="relative h-52 bg-[#145c3e] sm:h-60 lg:h-full">
+              <div className="absolute inset-0">
+                <ResilientImage
+                  src={CTA_IMAGE.src}
+                  alt={CTA_IMAGE.alt}
+                  fallbackTitle="On-site estimate with a Giraffe Tree Service crew"
+                  className="h-full w-full object-cover object-[center_30%]"
+                />
+              </div>
             </div>
           </div>
         </div>
