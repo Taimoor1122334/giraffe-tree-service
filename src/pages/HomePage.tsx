@@ -61,7 +61,7 @@ export function HomePage() {
             alt=""
             fallbackTitle="Giraffe Tree Service · Little Rock, AR"
             loading="eager"
-            className="h-full w-full object-cover object-[78%_72%] lg:object-[right_68%]"
+            className="h-full w-full object-cover object-[62%_center]"
           />
           <div className="absolute inset-0 bg-[#0e3d2a]/40 lg:bg-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0e3d2a]/90 via-[#0e3d2a]/55 to-[#0e3d2a]/25 lg:bg-[linear-gradient(90deg,#0e3d2a_0%,rgba(14,61,42,0.82)_28%,rgba(14,61,42,0.18)_52%,transparent_68%)]" />
