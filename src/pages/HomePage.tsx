@@ -143,13 +143,13 @@ export function HomePage() {
                       e.preventDefault();
                       navigate(serviceHref);
                     }}
-                    className="group block aspect-[4/3] w-full overflow-hidden rounded-lg bg-[#eef3f0]"
+                    className="block aspect-[4/3] w-full overflow-hidden rounded-lg bg-[#eef3f0]"
                   >
                     <ResilientImage
                       src={service.image}
                       alt={service.imageAlt}
                       fallbackTitle={service.title}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      className="h-full w-full object-cover"
                     />
                   </a>
 
@@ -494,7 +494,8 @@ export function HomePage() {
               <ResilientImage
                 src={CTA_IMAGE.src}
                 alt={CTA_IMAGE.alt}
-                fallbackTitle="Stump Grinding & Property Cleanup"
+                fallbackTitle="On-site estimate with a Giraffe Tree Service crew"
+                className="h-full w-full object-cover object-center"
               />
             </div>
           </div>

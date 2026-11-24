@@ -98,13 +98,13 @@ export function BlogPage() {
                       e.preventDefault();
                       navigate(href);
                     }}
-                    className="group aspect-[16/10] w-full overflow-hidden bg-[#eef3f0]"
+                    className="aspect-[16/10] w-full overflow-hidden bg-[#eef3f0]"
                   >
                     <ResilientImage
                       src={post.image}
                       alt={post.imageAlt}
                       fallbackTitle={post.title}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      className="h-full w-full object-cover"
                     />
                   </a>
 

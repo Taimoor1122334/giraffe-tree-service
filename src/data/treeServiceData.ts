@@ -101,8 +101,8 @@ export const HERITAGE_IMAGE = {
 };
 
 export const CTA_IMAGE = {
-  src: '/images/stump-controls.jpg',
-  alt: 'Giraffe Tree Service operator running a stump grinder',
+  src: '/images/onsite-estimate.jpg',
+  alt: 'Tree crew walking a yard with a homeowner and pointing out a shade tree',
 };
 
 export const CREW_IMAGE = {

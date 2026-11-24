@@ -32,13 +32,19 @@ export function ResilientImage({
   }
 
   return (
-    <img
-      src={src}
-      alt={alt}
-      loading={loading}
-      referrerPolicy="no-referrer"
-      onError={() => setHasError(true)}
-      className={className}
-    />
+    <span className="relative block h-full w-full">
+      <img
+        src={src}
+        alt={alt}
+        loading={loading}
+        referrerPolicy="no-referrer"
+        onError={() => setHasError(true)}
+        className={`${className} saturate-[0.78] contrast-[0.92]`}
+      />
+      <span
+        className="pointer-events-none absolute inset-0 bg-[#163028]/20 shadow-[inset_0_0_48px_rgba(14,28,22,0.22)]"
+        aria-hidden="true"
+      />
+    </span>
   );
 }
