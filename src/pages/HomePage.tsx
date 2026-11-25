@@ -496,7 +496,7 @@ export function HomePage() {
                   src={CTA_IMAGE.src}
                   alt={CTA_IMAGE.alt}
                   fallbackTitle="On-site estimate with a Giraffe Tree Service crew"
-                  className="h-full w-full object-cover object-[center_30%]"
+                  className="h-full w-full object-cover object-center"
                 />
               </div>
             </div>

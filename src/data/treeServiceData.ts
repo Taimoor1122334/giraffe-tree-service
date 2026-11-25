@@ -101,8 +101,8 @@ export const HERITAGE_IMAGE = {
 };
 
 export const CTA_IMAGE = {
-  src: '/images/onsite-estimate.jpg',
-  alt: 'Tree crew walking a yard with a homeowner and pointing out a shade tree',
+  src: '/images/onsite-estimate.png',
+  alt: 'Giraffe crew member and a homeowner looking at a shade tree in the yard',
 };
 
 export const CREW_IMAGE = {
@@ -173,8 +173,8 @@ export const ALL_SERVICES: ServiceDetail[] = [
     categoryGroup: 'pruning-health',
     shortDescription:
       'Selective pruning, crown reduction, and clearance for dangerous overhangs to strengthen branch structure and preserve mature shade trees.',
-    image: '/images/Professional Tree Trimming Crew.png',
-    imageAlt: 'Giraffe Tree Service crew pruning a shade tree from a bucket',
+    image: '/images/Professional Tree Care in Action.png',
+    imageAlt: 'Giraffe Tree Service crew pruning a large oak from a bucket truck',
     overview:
       'Proper pruning removes deadwood, lifts low limbs over driveways and roofs, and thins congested crowns without topping or stripping the canopy. Every cut is placed to help the tree compartmentalize cleanly and withstand Arkansas windstorms.',
     whatWeDo: [
@@ -655,7 +655,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     category: 'Structural Care',
     readTime: '4 min read',
     publishedDate: 'October 2026',
-    image: '/images/Professional Tree Trimming Crew.png',
+    image: '/images/Professional Tree Care in Action.png',
     imageAlt: 'Giraffe Tree Service crew pruning a shade tree from a bucket',
     summary:
       'Hardware can extend the life of a valuable shade tree with a weak fork, provided the wood inside the trunk is still sound.',
@@ -678,7 +678,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     category: 'Tree Health',
     readTime: '3 min read',
     publishedDate: 'September 2026',
-    image: '/images/Professional Tree Trimming Crew.png',
+    image: '/images/Professional Tree Care in Action.png',
     imageAlt: 'Giraffe Tree Service crew pruning a mature shade tree',
     summary:
       'Shearing off the upper canopy starves the roots and forces rapid, weakly attached shoots that snap faster in the next storm.',
