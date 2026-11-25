@@ -91,7 +91,7 @@ export const BRAND_LOGO = {
 };
 
 export const HERO_IMAGE = {
-  src: '/images/Giraffe Tree Service -treecutting.png',
+  src: '/images/Giraffe Tree Service -treecutting.webp',
   alt: 'Giraffe Tree Service crane lifting a trunk beside a brick home',
 };
 
@@ -101,7 +101,7 @@ export const HERITAGE_IMAGE = {
 };
 
 export const CTA_IMAGE = {
-  src: '/images/onsite-estimate.png',
+  src: '/images/onsite-estimate.webp',
   alt: 'Giraffe crew member and a homeowner looking at a shade tree in the yard',
 };
 
@@ -120,7 +120,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
     categoryGroup: 'removal-storm',
     shortDescription:
       'Safe, controlled removal of hazardous, declining, or unwanted trees, using cranes and modern rigging gear to protect your home, lawn, and surrounding beds.',
-    image: '/images/Giraffe Tree Service -treecutting.png',
+    image: '/images/Giraffe Tree Service -treecutting.webp',
     imageAlt: 'Giraffe Tree Service crane lifting a trunk beside a brick home',
     overview:
       'Removing a large hardwood close to a roofline, fence, or utility line requires disciplined rigging rather than guesswork. Our crews evaluate lean, decay, drop zones, and access before choosing climbing, sectional rigging, or crane-assisted removal.',
@@ -173,7 +173,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
     categoryGroup: 'pruning-health',
     shortDescription:
       'Selective pruning, crown reduction, and clearance for dangerous overhangs to strengthen branch structure and preserve mature shade trees.',
-    image: '/images/Professional Tree Care in Action.png',
+    image: '/images/Professional Tree Care in Action.webp',
     imageAlt: 'Giraffe Tree Service crew pruning a large oak from a bucket truck',
     overview:
       'Proper pruning removes deadwood, lifts low limbs over driveways and roofs, and thins congested crowns without topping or stripping the canopy. Every cut is placed to help the tree compartmentalize cleanly and withstand Arkansas windstorms.',
@@ -226,7 +226,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
     categoryGroup: 'lot-stump',
     shortDescription:
       'Selective lot clearing, brush hogging, and forestry mulching for homeowners, builders, and developers preparing building sites or reclaiming overgrown land.',
-    image: '/images/Giraffe Tree Service Clearing Crew.png',
+    image: '/images/Giraffe Tree Service Clearing Crew.webp',
     imageAlt: 'Giraffe Tree Service crew clearing brush with a skid steer and excavator',
     overview:
       'Good lot clearing balances clean site access with smart preservation. We walk the acreage with homeowners or site superintendents to flag healthy specimen oaks and pines worth keeping while clearing underbrush, invasives, and marked timber.',
@@ -279,7 +279,7 @@ export const ALL_SERVICES: ServiceDetail[] = [
     categoryGroup: 'removal-storm',
     shortDescription:
       'When severe storms bring trees or heavy limbs onto roofs, vehicles, or driveways, our emergency crew responds 24/7 across Central Arkansas.',
-    image: '/images/Storm Cleanup Tree Crew at Work.png',
+    image: '/images/Storm Cleanup Crew at Work.webp',
     imageAlt: 'Giraffe Tree Service crew cutting a tree that fell on a house',
     overview:
       'Spring tornadoes, summer microbursts, and winter ice storms put tremendous weight on Central Arkansas oaks and pines. Our emergency dispatch stabilizes hangers, lifts limbs off structures using cranes and rigging, and clears access safely.',
@@ -655,7 +655,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     category: 'Structural Care',
     readTime: '4 min read',
     publishedDate: 'October 2026',
-    image: '/images/Professional Tree Care in Action.png',
+    image: '/images/Professional Tree Care in Action.webp',
     imageAlt: 'Giraffe Tree Service crew pruning a shade tree from a bucket',
     summary:
       'Hardware can extend the life of a valuable shade tree with a weak fork, provided the wood inside the trunk is still sound.',
@@ -678,7 +678,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     category: 'Tree Health',
     readTime: '3 min read',
     publishedDate: 'September 2026',
-    image: '/images/Professional Tree Care in Action.png',
+    image: '/images/Professional Tree Care in Action.webp',
     imageAlt: 'Giraffe Tree Service crew pruning a mature shade tree',
     summary:
       'Shearing off the upper canopy starves the roots and forces rapid, weakly attached shoots that snap faster in the next storm.',
@@ -701,7 +701,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     category: 'Storm Safety',
     readTime: '3 min read',
     publishedDate: 'August 2026',
-    image: '/images/Storm Cleanup Tree Crew at Work.png',
+    image: '/images/Storm Cleanup Crew at Work.webp',
     imageAlt: 'Giraffe Tree Service crew cutting a tree that fell on a house',
     summary:
       'How to assess downed limbs safely before a crew arrives, especially around service drops, fences, and tensioned trunks.',
@@ -724,7 +724,7 @@ export const BLOG_POSTS: BlogArticle[] = [
     category: 'Property Maintenance',
     readTime: '4 min read',
     publishedDate: 'July 2026',
-    image: '/images/Giraffe Tree Service Clearing Crew.png',
+    image: '/images/Giraffe Tree Service Clearing Crew.webp',
     imageAlt: 'Giraffe Tree Service crew clearing brush on a wooded lot',
     summary:
       'Thoughtful site flagging before bulldozers arrive saves mature shade trees from slow post-construction decline.',
